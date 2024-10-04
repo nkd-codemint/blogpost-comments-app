@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All blog posts</title>
+  </head>
+  <body>
+    <h1>All blog posts</h1>
+    <ul>
+      <% for(let blogPost of blogPosts ) { %>
+      <li>
+        <a href="/blogPosts/<%= blogPost._id %>"><%= blogPost.title %></a>
+      </li>
+      <% } %>
+    </ul>
+    <a href="/blogPosts/new">Write new blog</a>
+  </body>
+</html>
